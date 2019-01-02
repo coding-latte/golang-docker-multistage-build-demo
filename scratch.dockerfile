@@ -8,10 +8,6 @@ RUN go get .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 
-# install ca-certificates
-#RUN apk --update add ca-certificates
-
-
 # deployment image
 FROM scratch
 
@@ -19,6 +15,7 @@ FROM scratch
 
 LABEL author="Maina Wycliffe"
 
+# copy ca-certificates from builder
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 
 WORKDIR /bin/
