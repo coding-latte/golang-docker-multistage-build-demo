@@ -1,6 +1,6 @@
 FROM golang as builder
 
-WORKDIR /go/github.com/coding-latte/golang-docker-multistage-build-demo
+WORKDIR /go/src/github.com/coding-latte/golang-docker-multistage-build-demo
 
 COPY . .
 
@@ -15,7 +15,7 @@ RUN apk --no-cache add ca-certificates
 LABEL author="Maina Wycliffe"
 
 WORKDIR /root/
-COPY --from=builder /go/github.com/coding-latte/golang-docker-multistage-build-demo/app .
+COPY --from=builder /go/src/github.com/coding-latte/golang-docker-multistage-build-demo/app .
 
 CMD [ "./app" ]
 

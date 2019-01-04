@@ -1,6 +1,6 @@
 FROM golang
 
-WORKDIR /go/github.com/coding-latte/golang-docker-multistage-build-demo
+WORKDIR /go/src/github.com/coding-latte/golang-docker-multistage-build-demo
 
 COPY . .
 
