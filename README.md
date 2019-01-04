@@ -7,4 +7,4 @@ To run this demo:
 3. then, run the docker image `docker run --rm -d -p 8080:8080/tcp golang-docker-multistage-build-scratch-demo:latest`
 4. open your browser and navigate to [localhost:8080](http://localhost:8080)
 
-For more information about this repo, please visit the accompanying article [here](https://link)
+For more information about this repo, please visit the accompanying article [here](https://theinfogrid.com/tech/developers/golang/golang-small-docker-images/)
